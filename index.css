@@ -17,6 +17,10 @@ body{
 
 .Header{
     display: flex;
+    justify-content: center;
+    
+    
+   
 }
 .Header h3{
     margin-right: 10px;
@@ -117,3 +121,50 @@ h2{color: white;}
   .btn:hover {
     background: #0056b3;
   }
+
+
+  .contact-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
+    background-color: #202020;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .contact-link {
+    font-size: 1.3rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+  }
+  
+  .contact-link:hover {
+    color: #ff7eb3; /* Pink color on hover */
+  }
+
+
