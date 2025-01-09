@@ -1,0 +1,60 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+body{
+    font-family: system-ui;
+    margin: 0px;
+    background-color: #121212;
+}
+
+.Header{
+    display: flex;
+}
+.Header h3{
+    margin-right: 10px;
+    font-size: 32px;
+    margin-left: 14px;
+    padding-top: 10px;
+}
+.omar{
+    color: rgb(255, 82, 82);
+    
+}
+.cont-header{
+   display: flex;
+    margin-left: auto;
+}
+
+.cont-header h3{
+    font-size: 24px;
+    text-align: center;
+    padding-top: 25px;
+
+    color: white;
+
+}
+a{
+    text-decoration: none;
+}
+
+
+
+hr{
+
+    border-color: #3B3B3B;
+}
+
+/* Main */
+.main h1{
+    color: rgb(255, 104, 104);
+    font-size: 45px;
+    text-align: center;
+}
