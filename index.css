@@ -1,18 +1,12 @@
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+
 
 
 
 body{
     font-family: system-ui;
     margin: 0px;
-    background-color: #121212;
+    background: linear-gradient(120deg, #ff7eb3, #758cff, #7cffcb);
+    animation: moveBackground 10s infinite;
 }
 
 .Header{
@@ -26,7 +20,7 @@ body{
     padding-top: 10px;
 }
 .omar{
-    color: rgb(255, 82, 82);
+    color: rgb(255, 255, 255);
     
 }
 .cont-header{
@@ -49,7 +43,11 @@ a{
 
 
 hr{
+ border-color: #ff7eb3 ;
 
+
+    border-color: #3B3B3B;
+    
     border-color: #3B3B3B;
 }
 
@@ -121,14 +119,12 @@ h2{color: white;}
 
 
   .contact-section {
-    width: 100000px;
-    
     padding: 30px;
-    background-color: #202020;
+    
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     text-align: center;
-    transition: background-color 0.2s ease;
+    transition:  0.2s ease;
     cursor: pointer;
   }
   
