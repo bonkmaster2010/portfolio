@@ -1,0 +1,98 @@
+:root {
+  --neon-blue: #00f2ff;
+  --neon-pink: #ff00ff;
+  --text-glow: rgba(245, 245, 245, 0.8);
+}
+
+/* ----- Title Styles ----- */
+#pro-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f5f5f5;
+  margin: 20px 0 10px;
+  text-shadow: 0 0 8px var(--neon-blue),
+               0 0 16px rgba(0, 242, 255, 0.3);
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Animated Gradient Line */
+#pro-hr {
+  width: 150px;
+  height: 4px;
+  margin: 0 auto 40px;
+  background: linear-gradient(90deg, 
+              transparent, 
+              var(--neon-blue), 
+              var(--neon-pink), 
+              transparent);
+  border: none;
+  border-radius: 2px;
+  animation: expandLine 0.8s cubic-bezier(0.65, 0, 0.35, 1),
+             pulseGlow 3s infinite alternate;
+  box-shadow: 0 0 10px var(--neon-blue),
+              0 0 20px rgba(255, 0, 255, 0.3);
+}
+
+@keyframes expandLine {
+  from { width: 0; opacity: 0; }
+  to { width: 150px; opacity: 1; }
+}
+
+@keyframes pulseGlow {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Projects Container */
+.projects-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 0 20px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ----- Responsive Grid ----- */
+@media (min-width: 768px) {
+  .projects-cont {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .Card {
+    width: calc(50% - 32px);
+    margin: 0;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  /* Staggered card hover effect */
+  .Card:nth-child(odd):hover {
+    transform: translateY(-8px) rotateZ(-1deg);
+  }
+  .Card:nth-child(even):hover {
+    transform: translateY(-8px) rotateZ(1deg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .Card {
+    width: calc(33.333% - 32px);
+  }
+}
+
+/* ----- Reduced Motion Support ----- */
+@media (prefers-reduced-motion) {
+  #pro-hr,
+  .Card {
+    animation: none !important;
+    transition: none !important;
+  }
+}

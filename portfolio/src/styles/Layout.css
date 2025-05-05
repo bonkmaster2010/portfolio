@@ -1,0 +1,195 @@
+:root {
+    /* Cyberpunk Color Palette */
+    --neon-blue: #00f2ff;
+    --neon-pink: #ff00ff;
+    --dark-bg: #0a0a0a;
+    --card-bg: #121212;
+    --text-primary: #ffffff;
+    --text-secondary: #D1E4FF;
+    --text-glow: rgba(0, 242, 255, 0.5);
+  }
+  
+  /* ----- Base Styles ----- */
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+                 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+                 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  
+  /* ----- Layout/Navbar ----- */
+  .Layout {
+    display: flex;
+    gap: 20px;
+    padding: 16px 5%;
+    background-color: rgba(26, 26, 26, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0, 242, 255, 0.1);
+  }
+  
+  .Layout a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .Layout a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 8px var(--text-glow);
+  }
+  
+  /* Active link indicator */
+  .Layout a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--neon-pink);
+    transition: all 0.3s ease;
+  }
+  
+  .Layout a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  /* ----- Style Toggle Button ----- */
+  #style-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background: var(--neon-blue);
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 0 10px var(--neon-blue),
+                0 0 20px rgba(0, 242, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  #style-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px var(--neon-blue),
+                0 0 25px rgba(0, 242, 255, 0.5);
+  }
+  
+  /* ----- Minimal Mode ----- */
+  .minimal-mode {
+    --neon-blue: #3B82F6;
+    --neon-pink: #EC4899;
+    --text-glow: none;
+  }
+  
+  .minimal-mode .Layout {
+    backdrop-filter: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .minimal-mode #style-toggle {
+    background: #3B82F6;
+    box-shadow: none;
+  }
+
+/* ----- Minimal Mode Toggle Button ----- */
+#tgm {
+    margin-left: auto; 
+    margin-right: 20px; 
+    align-self: center; 
+    
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    padding: 0;
+    background: #1a1a1a;
+    box-shadow: 0 0 0 2px var(--neon-blue),
+                inset 0 0 10px rgba(0, 242, 255, 0.2),
+                0 0 10px var(--neon-blue);
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  #tgm::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--neon-blue);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px var(--neon-blue);
+  }
+  
+  #tgm::after {
+    content: 'CYBER';
+    position: absolute;
+    right: 70px; 
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--neon-blue);
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  
+  .minimal-mode #tgm {
+    background: #3B82F6;
+    box-shadow: none;
+  }
+  
+  .minimal-mode #tgm::before {
+    left: calc(100% - 27px);
+    background: white;
+    box-shadow: none;
+  }
+  
+  .minimal-mode #tgm::after {
+    content: 'MINIMAL';
+    color: white;
+  }
+  
+  #tgm:hover {
+    box-shadow: 0 0 0 2px var(--neon-blue),
+                inset 0 0 15px rgba(0, 242, 255, 0.3),
+                0 0 15px var(--neon-blue);
+  }
+  
+  .minimal-mode #tgm:hover {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+  }
+  
+  #tgm:active::before {
+    width: 28px;
+  }
+  
+  @media (prefers-reduced-motion) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
