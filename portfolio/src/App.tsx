@@ -1,3 +1,4 @@
+import Footer from './components/Footer';
 import { randomQuote } from './components/Quotes';
 import { useState } from 'react'
 import './styles/App.css'
@@ -21,7 +22,7 @@ function AboutMe() {
           <div className='overlay'>
             <div className='modal'>
               <p>[Your journey story here]</p>
-              <button onClick={() => setMj(false)}>Close</button>
+              <button id='mj-check' onClick={() => setMj(false)}>Close</button>
             </div>
           </div>
         )}
@@ -29,11 +30,11 @@ function AboutMe() {
         <hr id='intro-hr' />
         <h2 className='intro-label'>Languages/Frameworks I Have Experience In</h2>
         <div className='my-skills'>
-          <a href='https://react.dev/'><span className='skills-card'>React</span></a>
-          <a href='https://www.w3schools.com/whatis/whatis_js.asp'><span className='skills-card'>JavaScript</span></a>
-          <a href='https://www.typescriptlang.org/'><span className='skills-card'>TypeScript</span></a>
-          <a href='https://www.w3schools.com/whatis/whatis_html.asp'><span className='skills-card'>HTML</span></a>
-          <a href='https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS'><span className='skills-card'>CSS</span></a>
+          <a target='_blank' href='https://react.dev/'><span className='skills-card'>React</span></a>
+          <a target='_blank' href='https://www.w3schools.com/whatis/whatis_js.asp'><span className='skills-card'>JavaScript</span></a>
+          <a target='_blank' href='https://www.typescriptlang.org/'><span className='skills-card'>TypeScript</span></a>
+          <a target='_blank' href='https://www.w3schools.com/whatis/whatis_html.asp'><span className='skills-card'>HTML</span></a>
+          <a target='_blank' href='https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS'><span className='skills-card'>CSS</span></a>
         </div>
 
         <hr id='intro-hr' />
@@ -42,7 +43,8 @@ function AboutMe() {
         <p>I aim to become a great developer currently wanting to Learn these: </p>
         <ul>
           <li>Front-end ✅</li>
-          <li>Back-end (Currently Learning)</li>
+          <li>TailWind CSS</li>
+          <li>Back-end</li>
           <li>C</li>
           <li>C++</li>
         </ul>
@@ -59,8 +61,8 @@ function AboutMe() {
         <p><b>"{quote}"</b></p>
           <button id='rockAndRoll' onClick={() => setQuote(randomQuote)}>Roll</button>
        </div>
-
       </div>
+      <Footer/>
     </>
   )
 }

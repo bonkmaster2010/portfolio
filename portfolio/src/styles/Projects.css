@@ -61,14 +61,11 @@
 /* ----- Responsive Grid ----- */
 @media (min-width: 768px) {
   .projects-cont {
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 32px;
   }
 
   .Card {
-    width: calc(50% - 32px);
     margin: 0;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
@@ -79,12 +76,6 @@
   }
   .Card:nth-child(even):hover {
     transform: translateY(-8px) rotateZ(1deg);
-  }
-}
-
-@media (min-width: 1024px) {
-  .Card {
-    width: calc(33.333% - 32px);
   }
 }
 

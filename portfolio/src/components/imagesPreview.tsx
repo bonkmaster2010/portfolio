@@ -1,45 +1,44 @@
 import '../styles/Card.css';
 import { useState } from 'react';
 
-interface CardTypes{
-    title: string;
-    images: string[];
-    imgClick: () => void;
+interface CardTypes {
+  title: string;
+  images: string[];
+  imgClick: () => void;
 }
 
-function ImgPreview(props: CardTypes){
+function ImgPreview({ title, images, imgClick }: CardTypes) {
+  const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
-    const [currentImgIndex, setCurrentImgIndex] = useState(0);
+  const goToNextImage = () => {
+    if (images?.length) {
+      setCurrentImgIndex((prev) => (prev + 1) % images.length);
+    }
+  };
 
-    const goToNextImage = () => {
-      if (props.images?.length) {
-        setCurrentImgIndex((prev) => (prev + 1) % props.images.length);
-      }
-    };
-    
-    const goToPrevImage = () => {
-      if (props.images?.length) {
-        setCurrentImgIndex((prev) => 
-          (prev - 1 + props.images.length) % props.images.length
-        );
-      }
-    };
+  const goToPrevImage = () => {
+    if (images?.length) {
+      setCurrentImgIndex((prev) => (prev - 1 + images.length) % images.length);
+    }
+  };
 
-    return(
-        <>
-            <img 
-                id='img'
-                src={props.images[currentImgIndex]} 
-                alt={props.title}
-                onClick={props.imgClick}
-            />
-          
-            <div className='ip-btn-cont'>
-                        <button onClick={goToNextImage}>l</button>
-                        <button onClick={goToPrevImage}>r</button>
-            </div>
-            </>
-    )
+  return (
+    <>
+      <img
+        id="img"
+        src={images[currentImgIndex]}
+        alt={title}
+        onClick={imgClick}
+      />
+
+      {images.length > 1 && (
+        <div className="ip-btn-cont">
+          <button onClick={goToPrevImage}>←</button>
+          <button onClick={goToNextImage}>→</button>
+        </div>
+      )}
+    </>
+  );
 }
 
 export default ImgPreview;

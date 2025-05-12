@@ -1,0 +1,148 @@
+/* Root Theme Variables */
+:root {
+  --neon-blue: #00e6f6;
+  --neon-pink: #ff4dff;
+  --dark-bg: #0b0b0f;
+  --card-bg: #16161a;
+  --text-primary: #f5f5f5;
+  --text-glow: rgba(255, 255, 255, 0.85);
+  --transition-fast: 0.3s ease;
+  --transition-smooth: 0.4s ease;
+}
+
+/* Base Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+}
+
+/* Container Wrapper */
+.cwrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Services Section */
+.services h1 {
+  margin: 0 auto;
+  padding: 10px 20px;
+  max-width: 280px;
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  text-align: center;
+  border: 1px solid var(--neon-blue);
+  border-radius: 8px;
+  box-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+  font-size: 28px;
+}
+
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.service-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  text-align: center;
+  min-height: 250px;
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  border: 1px solid var(--neon-blue);
+  box-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+  transition: all var(--transition-fast);
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px var(--neon-blue), 0 0 20px var(--neon-blue);
+}
+
+.service-card h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: var(--neon-blue);
+}
+
+.service-card p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.services a{
+  text-decoration: none;
+  color: white;
+}
+
+/* Contact Section */
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--card-bg);
+  padding: 30px 20px;
+  gap: 12px;
+  border-top: 1px solid var(--neon-blue);
+}
+
+.contact-me h1 {
+  text-align: center;
+  opacity: 0.9;
+  font-size: 26px;
+  margin: 0;
+}
+
+.contact-me p {
+  margin: 4px 0;
+  font-size: 18px;
+}
+
+.contact-me a {
+  color: var(--neon-blue);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+
+.contact-me a:hover {
+  transform: scale(1.01) translateY(-3px);
+  text-shadow: 0 0 10px var(--neon-blue);
+  color: #03c7d1;
+}
+
+/* Social Icons */
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.socials img {
+  border: none;
+  width: 40px;
+}
+
+#git:hover {
+  box-shadow: 0 0 15px white;
+  transition: box-shadow 0.3s ease;
+}
+
+#x:hover {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+#reddit:hover {
+  box-shadow: 0 0 15px red;
+  transition: box-shadow 0.3s ease;
+}

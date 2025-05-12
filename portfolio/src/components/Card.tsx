@@ -30,19 +30,19 @@ function Card(props: CardTypes){
     };
 
     return(
-        <div className='Card'>
+        <div className='Card'>              
             <img 
                 src={props.images[currentImgIndex]} 
                 alt={props.title}
                 onClick={props.imgClick}
             />
           
-            <div className='card-btn-cont'>
+          {props.images.length > 1 && <div className='card-btn-cont'>
                     <>
                         <button onClick={goToNextImage}>l</button>
                         <button onClick={goToPrevImage}>r</button>
                     </>
-            </div>
+            </div>}
 
             <h2>{props.title}</h2>
             <p>{props.desc}</p>

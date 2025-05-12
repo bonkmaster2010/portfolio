@@ -1,281 +1,274 @@
 :root {
-    --neon-blue: #00f2ff;
-    --neon-pink: #ff00ff;
-    --dark-bg: #0a0a0a;
-    --card-bg: #121212;
-    --text-primary: #ffffff;
-    --text-glow: rgba(255, 255, 255, 0.8);
-  }
-  
+  --neon-blue: #00f2ff;
+  --neon-pink: #ff00ff;
+  --dark-bg: #0a0a0a;
+  --card-bg: #121212;
+  --text-primary: #ffffff;
+  --text-glow: rgba(255, 255, 255, 0.8);
+  --transition-fast: 0.3s ease;
+  --transition-smooth: 0.4s ease;
+}
+
+.Card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 800px;  
+  max-width: 900px;
+  margin: 20px auto 30px;
+  padding: 16px;
+  border: 2px solid var(--neon-blue);
+  border-radius: 12px;
+  background-color: var(--card-bg);
+  box-shadow:
+    0 0 10px rgba(0, 242, 255, 0.3),
+    0 0 20px rgba(0, 242, 255, 0.2),
+    inset 0 0 10px rgba(0, 242, 255, 0.1);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+.Card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(to bottom right, transparent 45%, rgba(0, 242, 255, 0.1) 50%, transparent 55%);
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+.Card:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: var(--neon-pink);
+  box-shadow:
+    0 0 20px rgba(0, 242, 255, 0.5),
+    0 0 40px rgba(0, 242, 255, 0.3),
+    inset 0 0 15px rgba(0, 242, 255, 0.2);
+}
+
+.Card img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 242, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.Card img:hover {
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 25px var(--neon-blue), 0 0 35px rgba(0, 242, 255, 0.3);
+}
+
+.Card h2, .Card p {
+  margin: 0;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-shadow: 0 0 8px var(--text-glow);
+  transition: var(--transition-fast);
+}
+
+.Card h2:hover, .Card p:hover {
+  color: var(--neon-blue);
+  text-shadow: 0 0 12px var(--neon-blue);
+}
+
+#desc {
+  font-size: 17px;
+  max-width: 80%;
+  margin: 0 auto;
+  color: #b0b0b0;
+  text-align: center;
+}
+
+.card-btn-cont {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card-btn-cont button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--neon-blue);
+  background: transparent;
+  color: var(--neon-blue);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  box-shadow: 0 0 10px var(--neon-blue), 0 0 20px rgba(0, 242, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-btn-cont button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(to bottom right, transparent 45%, rgba(0, 242, 255, 0.3) 50%, transparent 55%);
+  transform: rotate(30deg);
+  transition: 0.6s ease;
+}
+
+.card-btn-cont button:hover {
+  transform: scale(1.1);
+  color: white;
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 15px var(--neon-blue), 0 0 25px rgba(0, 242, 255, 0.5);
+}
+
+.card-btn-cont button:hover::before {
+  transform: rotate(90deg);
+}
+
+.link-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 17px;
+  margin-top: 16px;
+}
+
+.link-btns button {
+  max-width: 160px;
+  width: 100%;
+  padding: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+  color: var(--neon-blue);
+  border: 1px solid var(--neon-blue);
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--neon-blue), inset 0 0 5px rgba(0, 242, 255, 0.2);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.link-btns button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 242, 255, 0.2), transparent);
+  transition: 0.6s ease;
+}
+
+.link-btns button:hover {
+  transform: translateY(-3px);
+  color: white;
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 15px var(--neon-blue), 0 0 25px rgba(0, 242, 255, 0.5), inset 0 0 10px rgba(0, 242, 255, 0.3);
+}
+
+.link-btns button:hover::after {
+  left: 100%;
+}
+
+#img {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 12px;
+  border: 2px solid var(--neon-blue);
+  box-shadow: 0 0 20px var(--neon-blue), 0 0 40px rgba(0, 242, 255, 0.2);
+  transition: var(--transition-smooth);
+  display: block;
+  position: relative;
+  overflow: auto;
+  max-height: 500px;
+}
+
+#img:hover {
+  transform: scale(1.01);
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 30px var(--neon-blue), 0 0 50px rgba(0, 242, 255, 0.3);
+}
+
+.ip-btn-cont {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.ip-btn-cont button {
+  padding: 10px 20px;
+  font-weight: 600;
+  background: transparent;
+  color: var(--neon-blue);
+  border: 2px solid var(--neon-blue);
+  border-radius: 13px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 0 10px var(--neon-blue), inset 0 0 5px rgba(0, 242, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.ip-btn-cont button:hover {
+  transform: translateY(-3px) scale(1.05);
+  color: white;
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 15px var(--neon-blue), 0 0 25px rgba(0, 242, 255, 0.4);
+}
+
+@media (max-width: 600px) {
   .Card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin: 20px auto;
-      width: 100%;
-      border: 2px solid var(--neon-blue);
-      border-radius: 12px;
-      padding: 16px;
-      box-shadow: 0 0 10px rgba(0, 242, 255, 0.3),
-                  0 0 20px rgba(0, 242, 255, 0.2),
-                  inset 0 0 10px rgba(0, 242, 255, 0.1);
-      background-color: var(--card-bg);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-      margin-bottom: 30px;
-      overflow: hidden;
-  }
-  
-  .Card::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(
-          to bottom right,
-          transparent 45%,
-          rgba(0, 242, 255, 0.1) 50%,
-          transparent 55%
-      );
-      transform: rotate(30deg);
-      pointer-events: none;
-  }
-  
-  .Card:hover {
-      box-shadow: 0 0 20px rgba(0, 242, 255, 0.5),
-                  0 0 40px rgba(0, 242, 255, 0.3),
-                  inset 0 0 15px rgba(0, 242, 255, 0.2);
-      transform: translateY(-8px) scale(1.01);
-      border-color: var(--neon-pink);
-  }
-  
-  /* Image Styles */
-  .Card img {
-      width: 100%;
-      height: auto;
-      max-height: 500px;
-      object-fit: cover;
-      border-radius: 8px;
-      transition: all 0.4s ease;
-      cursor: pointer;
-      border: 1px solid rgba(0, 242, 255, 0.3);
-      box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
-  }
-  
-  .Card img:hover {
-      box-shadow: 0 0 25px var(--neon-blue),
-                  0 0 35px rgba(0, 242, 255, 0.3);
-      border-color: var(--neon-blue);
-  }
-  
-  /* Text Styles */
-  .Card h2, .Card p {
-      margin: 0;
-      text-align: center;
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      text-shadow: 0 0 8px var(--text-glow);
-      transition: all 0.3s ease;
-  }
-  
-  #desc {
-      font-size: 17px;
-      max-width: 80%;
-      margin: 0px auto;
-      color: #b0b0b0;
-  }
-  
-  .Card h2:hover, .Card p:hover {
-      color: var(--neon-blue);
-      text-shadow: 0 0 12px var(--neon-blue);
-  }
-  
-  /* Button Containers */
-  .card-btn-cont {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-  }
-  
-  .card-btn-cont button {
-      border-radius: 50%;
-      border: 2px solid var(--neon-blue);
-      width: 48px;
-      height: 48px;
-      background-color: transparent;
-      color: var(--neon-blue);
-      cursor: pointer;
-      box-shadow: 0 0 10px var(--neon-blue),
-                  0 0 20px rgba(0, 242, 255, 0.3);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-  }
-  
-  .card-btn-cont button::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(
-          to bottom right,
-          transparent 45%,
-          rgba(0, 242, 255, 0.3) 50%,
-          transparent 55%
-      );
-      transform: rotate(30deg);
-      transition: all 0.6s ease;
-  }
-  
-  .card-btn-cont button:hover {
-      box-shadow: 0 0 15px var(--neon-blue),
-                  0 0 25px rgba(0, 242, 255, 0.5);
-      transform: scale(1.1);
-      color: white;
-      border-color: var(--neon-pink);
-  }
-  
-  .card-btn-cont button:hover::before {
-      transform: rotate(90deg);
-  }
-  
-  /* Link Buttons */
-  .link-btns {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 17px;
-      margin-top: 16px;
-  }
-  
-  .link-btns button {
-      background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
-      color: var(--neon-blue);
-      padding: 14px;
-      width: 100%;
-      max-width: 160px;
-      font-weight: bold;
-      border-radius: 10px;
-      border: 1px solid var(--neon-blue);
-      cursor: pointer;
-      transition: all 0.4s ease;
-      box-shadow: 0 0 10px var(--neon-blue),
-                  inset 0 0 5px rgba(0, 242, 255, 0.2);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-  }
-  
-  .link-btns button::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(0, 242, 255, 0.2),
-          transparent
-      );
-      transition: all 0.6s ease;
-  }
-  
-  .link-btns button:hover {
-      color: white;
-      box-shadow: 0 0 15px var(--neon-blue),
-                  0 0 25px rgba(0, 242, 255, 0.5),
-                  inset 0 0 10px rgba(0, 242, 255, 0.3);
-      transform: translateY(-3px);
-      border-color: var(--neon-pink);
-  }
-  
-  .link-btns button:hover::after {
-      left: 100%;
-  }
-  
-  /* Image Preview */
-  #img {
-      width: 100%;
-      max-width: 800px;
-      height: auto;
-      border: 2px solid var(--neon-blue);
-      box-shadow: 0 0 20px var(--neon-blue),
-                  0 0 40px rgba(0, 242, 255, 0.2);
-      border-radius: 12px;
-      transition: all 0.4s ease;
-      margin: 20px auto;
-      position: relative;
-  }
-  
-  #img:hover {
-      transform: scale(1.001);
-      box-shadow: 0 0 30px var(--neon-blue),
-                  0 0 50px rgba(0, 242, 255, 0.3);
-      border-color: var(--neon-pink);
-  }
-  
-  /* Image Preview Buttons */
-  .ip-btn-cont {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 20px;
-  }
-  
-  .ip-btn-cont button {
-      background: transparent;
-      color: var(--neon-blue);
-      border: 2px solid var(--neon-blue);
-      padding: 10px 20px;
-      border-radius: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.4s ease;
-      box-shadow: 0 0 10px var(--neon-blue),
-                  inset 0 0 5px rgba(0, 242, 255, 0.1);
-      position: relative;
-      overflow: hidden;
-  }
-  
-  .ip-btn-cont button:hover {
-      color: white;
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 0 15px var(--neon-blue),
-                  0 0 25px rgba(0, 242, 255, 0.4);
-      border-color: var(--neon-pink);
-  }
-  
-  /* Mobile Responsiveness */
-  @media (max-width: 600px) {
-      .link-btns {
-          flex-direction: column;
-          align-items: center;
-      }
-  
-      .link-btns button {
-          width: 100%;
-      }
-  
-      .Card {
-          padding: 12px;
-      }
-  
-      #desc {
-          max-width: 95%;
-      }
+    padding: 12px;
+    width: 100%; 
   }
 
-  @media (prefers-reduced-motion) {
-    .Card,
-    .Card * {
-      transition: none !important;
-      animation: none !important;
-    }
+  #desc {
+    max-width: 95%;
+    font-size: 14px;  
   }
+
+  .link-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .link-btns button {
+    width: 100%;
+  }
+
+  .card-btn-cont {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-btn-cont button {
+    width: 60px;
+    height: 60px;
+  }
+
+  #img {
+    max-width: 90%; 
+    max-height: 400px;
+  }
+
+  .ip-btn-cont button {
+    padding: 8px 16px;
+  }
+}
+
+@media (prefers-reduced-motion){
+  .Card, .Card img, .link-btns button, .card-btn-cont button {
+    transition: none;
+  }
+}

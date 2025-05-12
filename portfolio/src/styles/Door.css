@@ -1,0 +1,47 @@
+/* Door.css */
+#door {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    gap: 20px;
+    position: relative; 
+}
+
+#door p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 80%;
+    visibility: hidden; 
+}
+
+#enter{
+    text-align: center;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 8px;
+    background-color: #101010;
+}
+
+#door img {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #FFD700, 0 0 20px #D4AF37;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+#door img:hover {
+    box-shadow: 0 0 25px #FFD700, 0 0 30px #D4AF37;
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+#door img:hover + p { 
+    visibility: visible; /* Make text visible when image is hovered */
+}
