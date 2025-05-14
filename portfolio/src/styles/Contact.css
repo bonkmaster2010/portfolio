@@ -91,9 +91,9 @@ html, body {
   flex-direction: column;
   align-items: center;
   background-color: var(--card-bg);
+  margin-top: 10px;
   padding: 30px 20px;
   gap: 12px;
-  border-top: 1px solid var(--neon-blue);
 }
 
 .contact-me h1 {
@@ -109,7 +109,8 @@ html, body {
 }
 
 .contact-me a {
-  color: var(--neon-blue);
+  color: var(--text-primary);
+  text-shadow: 0 0 4px var(--text-glow);
   text-decoration: none;
   transition: all var(--transition-fast);
   display: inline-block;
@@ -117,8 +118,7 @@ html, body {
 
 .contact-me a:hover {
   transform: scale(1.01) translateY(-3px);
-  text-shadow: 0 0 10px var(--neon-blue);
-  color: #03c7d1;
+  text-shadow: 0 0 10px var(--text-glow);
 }
 
 /* Social Icons */

@@ -49,8 +49,8 @@ function Card(props: CardTypes){
             <p>{props.tools}</p>
 
             <div className='link-btns'>
-                <a href={props.web}><button>Go To Website</button></a>
-                <a href={props.git}><button>GitHub</button></a>
+                <a href={props.web} target='_blank'><button>Go To Website</button></a>
+                <a href={props.git} target='_blank'><button>GitHub</button></a>
             </div>
         </div>
     )

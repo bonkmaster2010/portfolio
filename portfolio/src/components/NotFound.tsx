@@ -7,7 +7,7 @@ export default function NotFound(){
         <div className="not-found">
             <h1>404</h1>
             <p>How did you get here ?!</p>
-            <button onClick={() => navi('/')}>Teleport</button>
+            <button onClick={() => navi('/home')}>Teleport</button>
         </div>
     )
 }

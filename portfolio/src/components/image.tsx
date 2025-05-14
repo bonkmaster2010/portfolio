@@ -30,6 +30,7 @@ import WTHR1 from '../imagesJS/weather/WTHR1.png';
 import WTHR2 from '../imagesJS/weather/WTHR2.png';
 import TDLJS from '../imagesJS/TDLJS.png';
 import calc from '../imagesJS/calc.png';
+import poke from '../imagesJS/poke.png';
 /* JS Projects */
 
-export { AB1, AB2, AB3, AB4, EC1, EC2, DB1, DB2, blog1, blog2, blog3, GNL, AC1, AC2, ET1, ET2, TTT1, TTT2, TDLR, WTHR1, WTHR2, TDLJS, calc }
+export { AB1, AB2, AB3, AB4, EC1, EC2, DB1, DB2, blog1, blog2, blog3, GNL, AC1, AC2, ET1, ET2, TTT1, TTT2, TDLR, WTHR1, WTHR2, TDLJS, calc, poke }

@@ -1,6 +1,7 @@
 :root {
   --neon-blue: #00f2ff;
   --neon-pink: #ff00ff;
+  --neon-orange: #ff6f00;
   --dark-bg: #0a0a0a;
   --card-bg: #121212;
   --text-primary: #ffffff;
@@ -19,6 +20,13 @@ body {
   margin: 0px;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-me {
   display: flex;
   flex-direction: column;
@@ -28,25 +36,26 @@ body {
 
 .my-intro {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  align-self: flex-end;
-  margin-right: 30px;
-  align-items: center;
-  gap: 10px;
-  background-color: var(--card-bg);
-  width: 450px;
+  background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), 
+    url('background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
   height: 300px;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid var(--text-primary);
-  margin-bottom: 10px;
-  opacity: 0;
-  animation: fadeInUp 0.6s ease-out forwards;
-  transition: transform var(--transition-fast);
+  margin-bottom: 20px;
 }
 
-.my-intro:hover {
-  transform: scale(1.05);
+.my-intro p {
+  font-size: 45px;
+  margin: 0px;
+  margin-bottom: 15px;
+}
+
+.my-intro p, button {
+  margin-left: 20px;
 }
 
 .intro-label {
@@ -58,7 +67,7 @@ body {
   margin: 0px auto;
   border-radius: 8px;
   font-size: 1.2rem;
-  color: var(--neon-blue);
+  color: var(--text-primary);
 }
 
 .my-skills {
@@ -93,6 +102,9 @@ body {
 
 .my-skills a {
   text-decoration: none;
+  color: var(--text-primary);
+}
+.my-skills a:hover{
   color: var(--neon-blue);
 }
 
@@ -123,26 +135,55 @@ body {
   height: 350px;
   text-align: center;
   animation: fadeIn 0.5s ease-in;
+  overflow: scroll;
 }
 
-#mj {
-  margin-top: auto;
+.project-highlights ul{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#mj, #mj-check, #img-close {
   width: 180px;
   padding: 10px 15px;
-  border: 2px solid var(--neon-blue);
   border-radius: 7px;
-  background-color: var(--neon-blue);
-  color: var(--text-primary);
   font-weight: bold;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
+#mj {
+  width: 300px;
+  background-color: var(--neon-orange);
+  color: #fff;
+  border: 2px solid var(--neon-orange);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--neon-orange), 0 0 20px var(--neon-orange);
+}
+
 #mj:hover {
-  background-color: #3eb2ff;
+  border: 2px solid #fa9b03;
+  background-color: #fc9c03;
+  box-shadow: 0 0 15px #ff9e00, 0 0 25px #ff9e00;
+}
+
+#mj-check:hover, #img-close:hover {
+  background-color: #ff9e00;
   color: var(--text-primary);
   transform: scale(1.05);
-  box-shadow: 0 0 10px #3498db, 0 0 15px #2980b9;
+  box-shadow: 0 0 20px #ff9e00, 0 0 30px #ff9e00;
+}
+
+#mj-check, #img-close {
+  border: 2px solid var(--neon-orange);
+  background-color: var(--neon-orange);
+  color: var(--text-primary);
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #intro-hr {
@@ -266,13 +307,14 @@ body {
 
 /* Responsive */
 @media screen and (max-width: 768px) {
-  .my-intro, .my-skills {
+  .my-skills {
     width: 90%;
     margin-right: 0;
   }
 
   .skills-card {
-    width: 80%;
+    width: 90px;
+    font-size: 14px;
     margin-bottom: 10px;
   }
 

@@ -14,14 +14,15 @@ function Contact() {
                         <div className='service-card'>
                             <h2>Web Development</h2>
                             <p>
-                                I build fast, responsive websites using modern technologies like React, TypeScript, Zustand and more!       (front-end & semi full stack using firebase)
+                                I build fast, responsive websites using modern technologies like React, TypeScript, Zustand and more!  
                             </p>
+                            <p>I offer front-end & semi full stack  services</p>
                         </div>
                         </a>
                     
                     </div>
                 </div>
-                <Footer/>
+                <Footer top="2px solid #00f2ff"/>
             </div>
         </>
     );

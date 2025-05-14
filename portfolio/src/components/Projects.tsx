@@ -49,7 +49,7 @@ function Projects() {
                     images={proj.images}
                     imgClick={() => imgPrev(i)}
                   />
-                  <button className="close-btn" onClick={() => imgPrev(i)}>Close</button>
+                  <button id='img-close' onClick={() => imgPrev(i)}>Close</button>
                 </div>
               </div>
             )}
@@ -57,7 +57,7 @@ function Projects() {
         ))}
       </div>
 
-      <Footer />
+      <Footer top="2px solid #00f2ff"/>
     </>
   );
 }

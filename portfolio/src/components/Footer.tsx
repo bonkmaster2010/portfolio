@@ -2,11 +2,11 @@ import git from '../icons/github.png';
 import x from '../icons/X.png';
 import red from '../icons/reddit.png';
 
-function Footer(){
+function Footer(props: any){
    return (
    <>
-                <div className='contact-me'>
-                    <h1>Want get in touch?</h1>
+                <div className='contact-me' style={{borderTop: props.top}}>
+                    <h1>Want to get in touch?</h1>
                     <p>Phone: +966 54 639 7121</p>
                     <p>
                         Email: {" "}

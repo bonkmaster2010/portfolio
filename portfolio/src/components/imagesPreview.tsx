@@ -32,7 +32,7 @@ function ImgPreview({ title, images, imgClick }: CardTypes) {
       />
 
       {images.length > 1 && (
-        <div className="ip-btn-cont">
+        <div style={{marginBottom: "20px"}} className="ip-btn-cont">
           <button onClick={goToPrevImage}>←</button>
           <button onClick={goToNextImage}>→</button>
         </div>

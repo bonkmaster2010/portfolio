@@ -1,33 +1,57 @@
 import Footer from './components/Footer';
 import { randomQuote } from './components/Quotes';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './styles/App.css'
 
+type text = string[];
+
 function AboutMe() {
+  const [typing, setTyping] = useState<text>([]);
   const [mj, setMj] = useState(false);
   const [quote, setQuote] = useState(randomQuote);
+  useEffect(() => {
+    let j = 0;
+    let text = "H i... im Omar".split("");
+    const typing = setInterval(() => {
+      if(j < text.length){
+        setTyping(prev => [...prev, text[j]])
+        j++;
+      }else{clearInterval(typing)}
+    }, 150)
+        return () => clearInterval(typing)
+  }, [])
+
   return (
     <>
-      <h1 style={{ textAlign: "center", margin: '0px', marginTop: "20px" }}>About me</h1>
-      <div className='about-me'>
-        <hr id='pro-hr' />
-
         <div className='my-intro'>
-          <h2>About Me</h2>
-          <p>[Your about me text here]</p>
-          <button onClick={() => setMj(true)} id='mj'>My Journey</button>
+          <p>{typing}</p>
+          <button onClick={() => setMj(true)} id='mj'>About Me</button>
         </div>
+
+      <div className='about-me'>
 
         {mj && (
           <div className='overlay'>
             <div className='modal'>
-              <p>[Your journey story here]</p>
+              <p>I'm Omar, a self-taught developer from Cairo, Egypt. I started learning web development at 14, and since then, I've been building real projects, learning by doing.</p>
+              <p>So far, I’ve completed 13 projects — including apps like a calculator, to-do list, blog, dashboard, and even an e-commerce site. Every project pushed me to learn something new and solve real problems.</p>
+              <p>I'm currently focused on learning full-stack development, and I'm excited to see what the future holds!</p>
+              
+              <div className='project-highlights'>
+                <p>❁ Project Hightlights ❁</p>
+                 <ul>
+                  <li><b>BirAnA</b> - My biggest project yet im proud of it took me around 2 weeks to finish it </li>
+                  <li><b>Guess N Live</b> - this project was really fun to build! its not as hard as the other's but i love it!</li>
+                  <li><b>Expense-Tracker</b> - this project was hard for me because i got an error every like second but im happy it turned out well (kinda)</li>
+                  </ul>
+                 
+              </div>
+              
               <button id='mj-check' onClick={() => setMj(false)}>Close</button>
             </div>
           </div>
         )}
 
-        <hr id='intro-hr' />
         <h2 className='intro-label'>Languages/Frameworks I Have Experience In</h2>
         <div className='my-skills'>
           <a target='_blank' href='https://react.dev/'><span className='skills-card'>React</span></a>
@@ -52,7 +76,13 @@ function AboutMe() {
         
         <h2 className='intro-label'>Interests</h2>
         <div className='intersts'>
-        <p>[Your interests go here]</p>
+        <p>I omar am intersted in a few things</p>
+        <ul>
+          <li>Gaming ( i like games like Doom, Destiny )</li>
+          <li>Programming ( who would have thought :) )</li>
+          <li>Reading ( i like reading self help books the most )</li>
+          <p style={{marginTop: "10px", textAlign: "center"}}>There are some more but it would take a lot of space to write them </p>        
+        </ul>
         </div>
         
         <h2 className='intro-label'>Quotes I Live By</h2>
@@ -62,7 +92,7 @@ function AboutMe() {
           <button id='rockAndRoll' onClick={() => setQuote(randomQuote)}>Roll</button>
        </div>
       </div>
-      <Footer/>
+      <Footer top="2px solid #f5f5f5"/>
     </>
   )
 }
