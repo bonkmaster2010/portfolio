@@ -2,12 +2,13 @@ import Card from './Card';
 import ImgPreview from './imagesPreview';
 import Footer from './Footer';
 import { projectData } from './projectData';
+import { useNavigate } from 'react-router';
 import { useState } from 'react';
 import '../styles/Projects.css';
 
 function Projects() {
   const [projects, setProjects] = useState(projectData);
-
+  const navi = useNavigate();
   function imgPrev(idx: number) {
     setProjects((prev) => {
       return prev.map((p, i) =>
@@ -24,9 +25,7 @@ function Projects() {
         <p style={{ opacity: '0.7', margin: '0px' }}>
           Note these projects still have some issues. I'm still working on fixing them (also click on the images to see their full size).
         </p>
-        <p style={{ opacity: '0.7', margin: '0px' }}>
-          Also, the Vanilla JavaScript projects are really basic — they were of course my first projects.
-        </p>
+
         {projects.map((proj, i) => (
           <div key={i}>
             {!proj.isActive && (
@@ -55,8 +54,8 @@ function Projects() {
             )}
           </div>
         ))}
+       <button className='other-projects-btn' onClick={() => navi("/other")}>Other Projects</button>
       </div>
-
       <Footer top="2px solid #00f2ff"/>
     </>
   );

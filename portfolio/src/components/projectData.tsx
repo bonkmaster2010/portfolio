@@ -13,10 +13,10 @@ type Project = {
 export const projectData: Project[] = [
     {
       title: "Netflix Clone",
-      desc: "",
+      desc: "A responsive Netflix-style streaming platform clone built with React. Features include dynamic movie browsing, search functionality, user-friendly interface, and integration with a movie database API for real-time content.",
       tools: "REACT • TSX • CSS • Zustand",
       images: [N1, N2, N3],
-      web: "https://vercel.com/omars-projects-b348f1ae",
+      web: "https://net-flix-raox.vercel.app/",
       git: "https://github.com/bonkmaster2010/net-flix",
       isActive: false
     },
@@ -48,15 +48,6 @@ export const projectData: Project[] = [
       isActive: false
     },
     {
-      title: "Multi Blog App",
-      desc: "a blog app with routing i made this to test my routing skills :) (this is a basic project)",
-      tools: "REACT • JS • CSS ",
-      images: [blog1, blog2, blog3],
-      web: "https://e-commerce-chi-six-60.vercel.app/",
-      git: "https://github.com/bonkmaster2010/Multi-Blog-App",
-      isActive: false
-    },
-    {
       title: "Guess N Live",
       desc: "A Guess the word game you only have 5 lives so choose wisely",
       tools: "REACT • JS • CSS ",
@@ -72,6 +63,19 @@ export const projectData: Project[] = [
       images: [AC1, AC2],
       web: "https://ai-chat-bot-orpin-two.vercel.app/",
       git: "https://github.com/bonkmaster2010/Ai-Chat-Bot",
+      isActive: false
+    },
+];
+
+  
+export const otherProjects: Project[] = [
+    {
+      title: "Multi Blog App",
+      desc: "a blog app with routing i made this to test my routing skills :) (this is a basic project)",
+      tools: "REACT • JS • CSS ",
+      images: [blog1, blog2, blog3],
+      web: "https://e-commerce-chi-six-60.vercel.app/",
+      git: "https://github.com/bonkmaster2010/Multi-Blog-App",
       isActive: false
     },
     {
@@ -138,6 +142,4 @@ export const projectData: Project[] = [
       git: "https://github.com/bonkmaster2010/Pokemon-App",
       isActive: false
     },
-];
-
-  
+]
