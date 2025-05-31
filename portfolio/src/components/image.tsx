@@ -1,3 +1,7 @@
+import N1 from '../images/netflix/N1.png';
+import N2 from '../images/netflix/N2.png';
+import N3 from '../images/netflix/N3.png';
+/* Netflix Clone */
 import AB1 from '../images/airbnb/AB1.png';
 import AB2 from '../images/airbnb/AB2.png';
 import AB3 from '../images/airbnb/AB3.png';
@@ -33,4 +37,4 @@ import calc from '../imagesJS/calc.png';
 import poke from '../imagesJS/poke.png';
 /* JS Projects */
 
-export { AB1, AB2, AB3, AB4, EC1, EC2, DB1, DB2, blog1, blog2, blog3, GNL, AC1, AC2, ET1, ET2, TTT1, TTT2, TDLR, WTHR1, WTHR2, TDLJS, calc, poke }
+export {N1, N2, N3, AB1, AB2, AB3, AB4, EC1, EC2, DB1, DB2, blog1, blog2, blog3, GNL, AC1, AC2, ET1, ET2, TTT1, TTT2, TDLR, WTHR1, WTHR2, TDLJS, calc, poke }

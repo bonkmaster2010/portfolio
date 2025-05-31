@@ -5,7 +5,7 @@ export default function Layout(){
     return (
         <>
         <nav className="Layout">
-            <NavLink to='/home'>Home</NavLink>
+            <NavLink to='/'>Home</NavLink>
             <NavLink to='/projects'>Projects</NavLink>
             <NavLink to='/services'>Services</NavLink>
             <button id="tgm" onClick={() => document.body.classList.toggle('minimal-mode')}></button>

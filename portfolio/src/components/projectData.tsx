@@ -1,4 +1,4 @@
-import { AB1, AB2, AB3, AB4, EC1, EC2, DB1, DB2, blog1, blog2, blog3, GNL, AC1, AC2, ET1, ET2, TTT1, TTT2, TDLR, WTHR1, WTHR2, TDLJS, calc, poke } from './image.tsx'
+import {N1, N2, N3, AB1, AB2, AB3, AB4, EC1, EC2, DB1, DB2, blog1, blog2, blog3, GNL, AC1, AC2, ET1, ET2, TTT1, TTT2, TDLR, WTHR1, WTHR2, TDLJS, calc, poke } from './image.tsx'
 
 type Project = {
   title: string;
@@ -11,6 +11,15 @@ type Project = {
 };
 
 export const projectData: Project[] = [
+    {
+      title: "Netflix Clone",
+      desc: "",
+      tools: "REACT • TSX • CSS • Zustand",
+      images: [N1, N2, N3],
+      web: "https://vercel.com/omars-projects-b348f1ae",
+      git: "https://github.com/bonkmaster2010/net-flix",
+      isActive: false
+    },
     {
       title: "AirBnB Clone",
       desc: "An AirBnB Clone ( Place Renting ) were u can create listings, edit them, Book them, review them and more!",
