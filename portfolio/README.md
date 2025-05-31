@@ -52,3 +52,5 @@ export default tseslint.config({
   },
 })
 ```
+
+im sigma im alpha
