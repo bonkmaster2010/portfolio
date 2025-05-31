@@ -2,7 +2,7 @@ import Card from './Card';
 import ImgPreview from './imagesPreview';
 import Footer from './Footer';
 import { projectData } from './projectData';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import '../styles/Projects.css';
 

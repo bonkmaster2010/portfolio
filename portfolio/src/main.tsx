@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout.tsx';
 import AboutMe from './App.tsx';
 import Projects from './components/Projects.tsx';
