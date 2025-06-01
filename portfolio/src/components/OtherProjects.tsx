@@ -57,7 +57,7 @@ function Other() {
         ))}
       </div>
 
-      <Footer top="2px solid #00f2ff"/>
+      <Footer/>
     </>
   );
 }
