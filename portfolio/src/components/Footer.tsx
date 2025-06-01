@@ -2,7 +2,7 @@ import git from '../icons/github.png';
 import x from '../icons/X.png';
 import red from '../icons/reddit.png';
 
-function Footer(props: any){
+function Footer(){
    return (
    <>
                 <div className='contact-me'>
