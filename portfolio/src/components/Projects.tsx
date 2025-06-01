@@ -56,7 +56,7 @@ function Projects() {
         ))}
        <button className='other-projects-btn' onClick={() => navi("/other")}>Other Projects</button>
       </div>
-      <Footer top="2px solid #00f2ff"/>
+      <Footer/>
     </>
   );
 }

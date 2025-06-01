@@ -1,202 +1,266 @@
 :root {
-  --neon-red: #ff003c; 
-  --soft-pink: #ffe4e1; 
-  --dark-bg: #fbe9e7; 
-  --card-bg: #f3d6c2; 
+  --neon-red: #FF3D3D;
+  --soft-pink: #FFE4E1;
+  --dark-bg: #F5E0C3;
+  --card-bg: #F3D6C2;
+  --accent-yellow: #FFD166;
+  --accent-blue: #4DA6FF;
+  --text-primary: #2E1A14;
+  --text-secondary: #5C3A2E;
+  --text-glow: rgba(255, 61, 61, 0.3);
+  --border-color: #FF3D3D;
+  --transition-bounce: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-  --text-primary: #2e1a14; 
-  --text-secondary: #5c3a2e; 
-  --text-glow: rgba(255, 0, 60, 0.3);
+/* ----- Base Styles ----- */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Comic Sans MS', 'Marker Felt', 'Arial Rounded MT Bold', sans-serif;
+  background-color: var(--dark-bg);
+  line-height: 1.6;
+  min-height: 100vh;
+}
 
-  --border-color: #ff003c; 
+/* ----- Cartoony Navbar ----- */
+.Layout {
+  display: flex;
+  gap: 15px;
+  padding: 12px 5%;
+  border-bottom: 3px dashed var(--neon-red);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--card-bg);
+  box-shadow: 0 5px 0 rgba(0,0,0,0.1);
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  max-height: 500px; /* enough height for nav */
+  opacity: 1;
+  overflow: hidden;
+}
 
-  --transition-fast: 0.3s ease;
-  --transition-smooth: 0.4s ease;
+.Layout.slide-out {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.Layout.slide-in {
+  max-height: 500px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.Layout a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all var(--transition-bounce);
+  position: relative;
+  background-color: var(--soft-pink);
+  border: 2px solid var(--neon-red);
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+}
+
+.Layout a:hover {
+  color: var(--neon-red);
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 0 rgba(0,0,0,0.1);
+  background-color: white;
+}
+
+/* Active link indicator */
+.Layout a::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  background: var(--accent-yellow);
+  transition: all var(--transition-bounce);
+  border-radius: 2px;
+}
+
+.Layout a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* ----- Cartoony Toggle Button ----- */
+#tgm {
+  margin-left: auto;
+  margin-right: 20px;
+  align-self: center;
+  width: 70px;
+  height: 35px;
+  border-radius: 35px;
+  border: 3px solid var(--neon-red);
+  padding: 0;
+  background: var(--soft-pink);
+  box-shadow: 5px 5px 0 rgba(0,0,0,0.1);
+  position: relative;
+  transition: all var(--transition-bounce);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#tgm::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--neon-red);
+  transition: all var(--transition-bounce);
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+}
+
+#tgm::after {
+  content: 'FUN!';
+  position: absolute;
+  right: 75px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--neon-red);
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+}
+
+/* Hide #tgm text on small screens */
+@media (max-width: 487px) {
+  #tgm::after {
+    content: '';
+  }
+}
+
+.minimal-mode #tgm {
+  background: var(--soft-pink);
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+}
+
+.minimal-mode #tgm::before {
+  left: calc(100% - 28px);
+  background: var(--text-primary);
+}
+
+.minimal-mode #tgm::after {
+  content: 'SIMPLE';
+  color: var(--text-primary);
+}
+
+#tgm:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0 rgba(0,0,0,0.1);
+}
+
+.minimal-mode #tgm:hover {
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+}
+
+#tgm:active::before {
+  width: 30px;
+}
+
+/* Nav toggle button fixed under navbar on right */
+.nav-toggle {
+  position: fixed;
+  top: calc(3rem + 42px); 
+  right: 5%;
+  z-index: 1100;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid var(--neon-red);
+  background-color: var(--soft-pink);
+  color: var(--neon-red);
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', sans-serif;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 rgba(0,0,0,0.1);
+  transition: all var(--transition-bounce);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  line-height: 1;
+}
+
+.nav-toggle:hover {
+  transform: translateY(-5px) scale(1.1);
+  background-color: var(--neon-red);
+  color: white;
+  box-shadow: 8px 8px 0 rgba(0,0,0,0.1);
+}
+
+.nav-toggle::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-toggle:hover::after {
+  opacity: 0.4;
+}
+
+/* Minimal Mode Styles */
+.minimal-mode {
+  --neon-red: #5C3A2E;
+  --text-glow: none;
+  font-family: system-ui, sans-serif;
+}
+
+.minimal-mode .Layout {
+  border-bottom: 1px solid var(--neon-red);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: var(--card-bg);
+}
+
+.minimal-mode .Layout a {
+  border: 1px solid var(--neon-red);
+  box-shadow: none;
+  background: white;
+}
+
+.minimal-mode #style-toggle {
+  background: var(--neon-red);
+  box-shadow: none;
 }
 
 
-  
-  /* ----- Base Styles ----- */
-  body {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
-                 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
-                 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: var(--dark-bg);
-    color: var(--text-secondary);
-    line-height: 1.6;
-    min-height: 100vh;
+/* Animation keyframes */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 0.7;
   }
-  
-  /* ----- Layout/Navbar ----- */
-  .Layout {
-    display: flex;
-    gap: 20px;
-    padding: 16px 5%;
-    background-color: rgba(26, 26, 26, 0.8);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 15px rgba(0, 242, 255, 0.1);
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+    opacity: 1;
   }
-  
-  .Layout a {
-    text-decoration: none;
-    color: var(--text-primary);
-    font-weight: 500;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    position: relative;
+  60% {
+    transform: translateX(-50%) translateY(-5px);
   }
-  
-  .Layout a:hover {
-    color: var(--neon-blue);
-    text-shadow: 0 0 8px var(--text-glow);
-  }
-  
-  /* Active link indicator */
-  .Layout a::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: var(--neon-pink);
-    transition: all 0.3s ease;
-  }
-  
-  .Layout a:hover::after {
-    width: 100%;
-    left: 0;
-  }
-  
-  /* ----- Style Toggle Button ----- */
-  #style-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-    background: var(--neon-blue);
-    color: #000;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    box-shadow: 0 0 10px var(--neon-blue),
-                0 0 20px rgba(0, 242, 255, 0.3);
-    transition: all 0.3s ease;
-  }
-  
-  #style-toggle:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 15px var(--neon-blue),
-                0 0 25px rgba(0, 242, 255, 0.5);
-  }
-  
-  /* ----- Minimal Mode ----- */
-  .minimal-mode {
-    --neon-red: #3B82F6;
-    --soft-pink: #EC4899;
-    --text-glow: none;
-  }
-  
-  .minimal-mode .Layout {
-    backdrop-filter: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .minimal-mode #style-toggle {
-    background: #3B82F6;
-    box-shadow: none;
-  }
+}
 
-/* ----- Minimal Mode Toggle Button ----- */
-#tgm {
-    margin-left: auto; 
-    margin-right: 20px; 
-    align-self: center; 
-    
-    width: 60px;
-    height: 30px;
-    border-radius: 30px;
-    border: none;
-    padding: 0;
-    background: #1a1a1a;
-    box-shadow: 0 0 0 2px var(--neon-blue),
-                inset 0 0 10px rgba(0, 242, 255, 0.2),
-                0 0 10px var(--neon-blue);
-    position: relative;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    z-index: 1000;
+@media (prefers-reduced-motion) {
+  * {
+    transition: none !important;
+    animation: none !important;
   }
-  
-  #tgm::before {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: var(--neon-blue);
-    transition: all 0.3s ease;
-    box-shadow: 0 0 5px var(--neon-blue);
-  }
-  
-  #tgm::after {
-    content: 'CYBER';
-    position: absolute;
-    right: 70px; 
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--neon-blue);
-    font-weight: bold;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    white-space: nowrap;
-  }
-  
-  .minimal-mode #tgm {
-    background: #3B82F6;
-    box-shadow: none;
-  }
-  
-  .minimal-mode #tgm::before {
-    left: calc(100% - 27px);
-    background: white;
-    box-shadow: none;
-  }
-  
-  .minimal-mode #tgm::after {
-    content: 'MINIMAL';
-    color: white;
-  }
-  
-  #tgm:hover {
-    box-shadow: 0 0 0 2px var(--neon-blue),
-                inset 0 0 15px rgba(0, 242, 255, 0.3),
-                0 0 15px var(--neon-blue);
-  }
-  
-  .minimal-mode #tgm:hover {
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
-  }
-  
-  #tgm:active::before {
-    width: 28px;
-  }
-  
-  @media (prefers-reduced-motion) {
-    * {
-      transition: none !important;
-      animation: none !important;
-    }
-  }
+}

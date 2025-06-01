@@ -5,7 +5,7 @@ import red from '../icons/reddit.png';
 function Footer(props: any){
    return (
    <>
-                <div className='contact-me' style={{borderTop: props.top}}>
+                <div className='contact-me'>
                     <h1>Want to get in touch?</h1>
                     <p>Phone: +966 54 639 7121</p>
                     <p>

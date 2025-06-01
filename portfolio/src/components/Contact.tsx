@@ -22,7 +22,7 @@ function Contact() {
                     
                     </div>
                 </div>
-                <Footer top="2px solid #00f2ff"/>
+                <Footer/>
             </div>
         </>
     );

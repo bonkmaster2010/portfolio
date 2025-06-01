@@ -92,7 +92,7 @@ function AboutMe() {
           <button id='rockAndRoll' onClick={() => setQuote(randomQuote)}>Roll</button>
        </div>
       </div>
-      <Footer top="2px solid #f5f5f5"/>
+      <Footer/>
     </>
   )
 }
