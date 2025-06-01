@@ -135,7 +135,6 @@ body {
   text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
 }
 
-/* Hide #tgm text on small screens */
 @media (max-width: 487px) {
   #tgm::after {
     content: '';
@@ -153,8 +152,8 @@ body {
 }
 
 .minimal-mode #tgm::after {
-  content: 'SIMPLE';
-  color: var(--text-primary);
+  content: 'SAD';
+  color: white;
 }
 
 #tgm:hover {
@@ -170,12 +169,11 @@ body {
   width: 30px;
 }
 
-/* Nav toggle button fixed under navbar on right */
 .nav-toggle {
   position: fixed;
   top: calc(3rem + 42px); 
   right: 5%;
-  z-index: 1100;
+  z-index: 100;
   width: 50px;
   height: 50px;
   border-radius: 50%;

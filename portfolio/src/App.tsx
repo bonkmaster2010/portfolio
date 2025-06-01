@@ -1,30 +1,20 @@
 import Footer from './components/Footer';
+import KonamiEgg from './components/Konami';
 import { randomQuote } from './components/Quotes';
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './styles/App.css'
 
-type text = string[];
-
 function AboutMe() {
-  const [typing, setTyping] = useState<text>([]);
   const [mj, setMj] = useState(false);
   const [quote, setQuote] = useState(randomQuote);
-  useEffect(() => {
-    let j = 0;
-    let text = "H i... im Omar".split("");
-    const typing = setInterval(() => {
-      if(j < text.length){
-        setTyping(prev => [...prev, text[j]])
-        j++;
-      }else{clearInterval(typing)}
-    }, 150)
-        return () => clearInterval(typing)
-  }, [])
+
 
   return (
-    <>
+    <> 
+       <KonamiEgg/>
         <div className='my-intro'>
-          <p>{typing}</p>
+          <h2>Hello! I'm Omar </h2>
+        <p>Welcome to my portfolio</p>   
           <button onClick={() => setMj(true)} id='mj'>About Me</button>
         </div>
 
