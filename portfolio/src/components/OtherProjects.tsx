@@ -44,6 +44,7 @@ function Other() {
             {proj.isActive && (
               <div className="overlay">
                 <div className="wrapper">
+                  <div className='image-preview-cont'>
                   <ImgPreview
                     title={proj.title}
                     desc={proj.desc}
@@ -54,6 +55,7 @@ function Other() {
                     imgClick={() => imgPrev(i)}
                   />
                   <button id='img-close' onClick={() => imgPrev(i)}>Close</button>
+                 </div>
                 </div>
               </div>
             )}
