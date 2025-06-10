@@ -262,3 +262,92 @@ body {
     animation: none !important;
   }
 }
+
+/* ----- Improved Mobile Design ----- */
+@media (max-width: 768px) {
+  .Layout {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .Layout a {
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    min-width: auto;
+    flex: 0 1 auto;
+  }
+
+  #tgm {
+    width: 60px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  #tgm::before {
+    width: 22px;
+    height: 22px;
+    top: 3px;
+    left: 3px;
+  }
+
+  #tgm::after {
+    font-size: 12px;
+    right: 65px;
+  }
+
+  .nav-toggle {
+    top: calc(2rem + 30px);
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Layout {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 4%;
+  }
+
+  .Layout a {
+    display: inline-block;
+    text-align: center;
+    font-size: 13px;
+    padding: 5px 8px;
+    min-width: auto;
+    border-radius: 5px;
+    white-space: nowrap;
+    flex: 0 1 auto;
+  }
+
+  #tgm {
+    width: 50px;
+    height: 26px;
+    margin-left: auto;
+  }
+
+  #tgm::before {
+    width: 18px;
+    height: 18px;
+  }
+
+  #tgm::after {
+    display: none;
+  }
+
+  .nav-toggle {
+    top: calc(2rem + 24px);
+    right: 5%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}

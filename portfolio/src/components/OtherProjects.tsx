@@ -46,6 +46,8 @@ function Other() {
                 <div className="wrapper">
                   <ImgPreview
                     title={proj.title}
+                    desc={proj.desc}
+                    tools={proj.tools}
                     images={proj.images}
                     imgClick={() => imgPrev(i)}
                   />

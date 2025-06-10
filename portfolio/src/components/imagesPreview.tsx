@@ -1,16 +1,15 @@
 import '../styles/Card.css';
-import { useState, useEffect } from 'react';
+import { useState, } from 'react';
 
 interface CardTypes {
   title: string;
   desc: string;
   tools: string;
   images: string[];
-  isActive: boolean,
   imgClick: () => void;
 }
 
-function ImgPreview({ title, desc, tools, images, isActive, imgClick }: CardTypes) {
+function ImgPreview({ title, desc, tools, images, imgClick }: CardTypes) {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
   const goToNextImage = () => {

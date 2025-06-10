@@ -3,7 +3,7 @@ import ImgPreview from './imagesPreview';
 import Footer from './Footer';
 import { projectData } from './projectData';
 import { useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import '../styles/Projects.css';
 
 function Projects() {
@@ -52,7 +52,6 @@ function Projects() {
                     tools={proj.tools}
                     images={proj.images}
                     imgClick={() => imgPrev(i)}
-                    isActive={proj.isActive}
                   />
                   <button id='img-close' onClick={() => imgPrev(i)}>Close</button>
                   </div>
