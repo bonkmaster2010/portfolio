@@ -182,7 +182,7 @@
   padding: 12px 24px;
   font-weight: bold;
   font-family: 'Comic Sans MS', sans-serif;
-  background: white;
+  background: var(--cart-red);
   color: var(--cart-red);
   border: 3px solid var(--cart-red);
   border-radius: 12px;
@@ -195,7 +195,7 @@
 .ip-btn-cont button:hover {
   transform: translateY(-5px) scale(1.05);
   background: var(--cart-red);
-  color: white;
+  color: var(--red-light);
   box-shadow: 8px 8px 0 rgba(0,0,0,0.1);
 }
 

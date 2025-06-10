@@ -39,8 +39,8 @@ function Card(props: CardTypes){
           
           {props.images.length > 1 && <div className='card-btn-cont'>
                     <>
-                        <button onClick={goToNextImage}>l</button>
-                        <button onClick={goToPrevImage}>r</button>
+                        <button onClick={goToNextImage}>←</button>
+                        <button onClick={goToPrevImage}>→</button>
                     </>
             </div>}
 
