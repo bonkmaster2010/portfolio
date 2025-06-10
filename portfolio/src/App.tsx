@@ -23,13 +23,14 @@ function AboutMe() {
         {mj && (
           <div className='overlay'>
             <div className='modal'>
-              <p>I'm Omar, a self-taught developer from Cairo, Egypt. I started learning web development at 14, and since then, I've been building real projects, learning by doing.</p>
+              <p>I'm Omar, a self-taught developer from Cairo, Egypt. I started learning web development and since then, I've been building real projects, learning by doing.</p>
               <p>So far, I’ve completed 13 projects — including apps like a calculator, to-do list, blog, dashboard, and even an e-commerce site. Every project pushed me to learn something new and solve real problems.</p>
               <p>I'm currently focused on learning full-stack development, and I'm excited to see what the future holds!</p>
               
               <div className='project-highlights'>
                 <p>❁ Project Hightlights ❁</p>
                  <ul>
+                  <li><b>Fnaf 1</b> - currently being built its a top view fnaf 1 game i tried my best to make it first person using three.js but my device can't handle it</li>
                   <li><b>BirAnA</b> - My biggest project yet im proud of it took me around 2 weeks to finish it </li>
                   <li><b>Guess N Live</b> - this project was really fun to build! its not as hard as the other's but i love it!</li>
                   <li><b>Expense-Tracker</b> - this project was hard for me because i got an error every like second but im happy it turned out well (kinda)</li>

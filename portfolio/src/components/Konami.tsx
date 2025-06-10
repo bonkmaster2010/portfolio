@@ -35,7 +35,7 @@ const KonamiEgg = () => {
     <AnimatePresence>
       {showMonster && (
         <motion.div
-         onClick={() => window.open("https://youtu.be/dQw4w9WgXcQ", "_blank")}
+         onClick={() => window.open("", "_blank")}
           key="monster"
           initial={{ x: "-100px", y: 0 }}
           animate={{ 
