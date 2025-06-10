@@ -34,7 +34,7 @@ body {
   background-color: var(--card-bg);
   box-shadow: 0 5px 0 rgba(0,0,0,0.1);
   transition: max-height 0.3s ease, opacity 0.3s ease;
-  max-height: 500px; /* enough height for nav */
+  max-height: 500px; 
   opacity: 1;
   overflow: hidden;
 }

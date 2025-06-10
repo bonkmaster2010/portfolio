@@ -5,11 +5,13 @@ interface CardTypes {
   title: string;
   desc: string;
   tools: string;
+  web: string;
+  git: string;
   images: string[];
   imgClick: () => void;
 }
 
-function ImgPreview({ title, desc, tools, images, imgClick }: CardTypes) {
+function ImgPreview({ title, desc, tools, git, web, images, imgClick }: CardTypes) {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
   const goToNextImage = () => {
@@ -44,6 +46,10 @@ function ImgPreview({ title, desc, tools, images, imgClick }: CardTypes) {
         <h2>{title}</h2>
         <p>{desc}</p>
         <p>{tools}</p>
+        <div className='link-btns' style={{marginBottom: "20px"}}>
+        <a href={web} target='_blank'><button>Go To Website</button></a>
+        <a href={git} target='_blank'><button>GitHub</button></a>
+        </div>
       </div>
     </>
   );

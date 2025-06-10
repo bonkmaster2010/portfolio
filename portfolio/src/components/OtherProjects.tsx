@@ -48,6 +48,8 @@ function Other() {
                     title={proj.title}
                     desc={proj.desc}
                     tools={proj.tools}
+                    web={proj.web}
+                    git={proj.git}
                     images={proj.images}
                     imgClick={() => imgPrev(i)}
                   />

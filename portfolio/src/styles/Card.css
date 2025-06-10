@@ -205,6 +205,7 @@
   flex-direction: column;
   justify-content: center;
   background-color: var(--beige);
+  border: 2px solid var(--cart-red);
   border-radius: 8px;
   width: 80%;
   padding: 30px;

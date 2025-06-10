@@ -24,7 +24,7 @@ function Projects() {
       <hr id="pro-hr" />
       <div className="projects-cont">
         <p style={{ opacity: '0.7', margin: '0px' }}>
-          Note these projects still have some issues. I'm still working on fixing them (also click on the images to see their full size).
+          Note these projects still have some issues. I'm still working on fixing them
         </p>
 
         {projects.map((proj, i) => (
@@ -50,6 +50,8 @@ function Projects() {
                     title={proj.title}
                     desc={proj.desc}
                     tools={proj.tools}
+                    web={proj.web}
+                    git={proj.git}
                     images={proj.images}
                     imgClick={() => imgPrev(i)}
                   />
