@@ -43,7 +43,7 @@ function AboutMe() {
           </div>
         )}
 
-        <h2 className='intro-label'>Languages/Frameworks I Have Experience In</h2>
+        <h2 className='intro-label'>FrontEnd Languages/Frameworks I Have Experience In</h2>
         <div className='my-skills'>
           <a target='_blank' href='https://react.dev/'><span className='skills-card'>React</span></a>
           <a target='_blank' href='https://www.w3schools.com/whatis/whatis_js.asp'><span className='skills-card'>JavaScript</span></a>
@@ -58,8 +58,7 @@ function AboutMe() {
         <p>I aim to become a great developer currently wanting to Learn these: </p>
         <ul>
           <li>Front-end ✅</li>
-          <li>TailWind CSS</li>
-          <li>Back-end</li>
+          <li>Back-end (currently learning)</li>
           <li>C</li>
           <li>C++</li>
         </ul>

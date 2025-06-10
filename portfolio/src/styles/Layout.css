@@ -152,7 +152,7 @@ body {
 }
 
 .minimal-mode #tgm::after {
-  content: 'SAD';
+  content: 'Simple';
   color: white;
 }
 

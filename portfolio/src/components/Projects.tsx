@@ -3,7 +3,7 @@ import ImgPreview from './imagesPreview';
 import Footer from './Footer';
 import { projectData } from './projectData';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../styles/Projects.css';
 
 function Projects() {
@@ -16,6 +16,7 @@ function Projects() {
       );
     });
   }
+ 
 
   return (
     <>
@@ -43,12 +44,18 @@ function Projects() {
             {proj.isActive && (
               <div className="overlay">
                 <div className="wrapper">
+                 <div className='image-preview-cont'>
+
                   <ImgPreview
                     title={proj.title}
+                    desc={proj.desc}
+                    tools={proj.tools}
                     images={proj.images}
                     imgClick={() => imgPrev(i)}
+                    isActive={proj.isActive}
                   />
                   <button id='img-close' onClick={() => imgPrev(i)}>Close</button>
+                  </div>
                 </div>
               </div>
             )}
