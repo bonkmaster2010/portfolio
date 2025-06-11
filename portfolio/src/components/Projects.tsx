@@ -42,9 +42,9 @@ function Projects() {
             )}
 
             {proj.isActive && (
-              <div className="overlay">
+              <div className="overlay" onClick={() => imgPrev(i)}>
                 <div className="wrapper">
-                 <div className='image-preview-cont'>
+                 <div className='image-preview-cont' onClick={(e) =>e.stopPropagation()}>
 
                   <ImgPreview
                     title={proj.title}

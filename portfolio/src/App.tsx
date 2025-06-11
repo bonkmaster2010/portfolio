@@ -13,7 +13,7 @@ function AboutMe() {
     <> 
        <KonamiEgg/>
         <div className='my-intro'>
-          <h2>Hello! I'm Omar </h2>
+          <h2>Hello! I'm Omar a Software engineer</h2>
         <p>Welcome to my portfolio</p>   
           <button onClick={() => setMj(true)} id='mj'>About Me</button>
         </div>
@@ -22,7 +22,7 @@ function AboutMe() {
 
         {mj && (
           <div className='overlay' onClick={() => setMj(false)}>
-            <div className='modal'>
+            <div className='modal' onClick={(e) => e.stopPropagation()}>
               <p>I'm Omar, a self-taught developer from Cairo, Egypt. I started learning web development and since then, I've been building real projects, learning by doing.</p>
               <p>So far, I’ve completed 13 projects — including apps like a calculator, to-do list, blog, dashboard, and even an e-commerce site. Every project pushed me to learn something new and solve real problems.</p>
               <p>I'm currently focused on learning full-stack development, and I'm excited to see what the future holds!</p>
