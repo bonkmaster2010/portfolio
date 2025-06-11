@@ -1,10 +1,8 @@
 import git from '../icons/github.png';
 import x from '../icons/X.png';
 import red from '../icons/reddit.png';
-import { useState } from 'react';
 
 function Footer(){
-    const [gub, setGub] = useState(false);
    return (
    <>
                 <div className='contact-me'>
@@ -24,17 +22,7 @@ function Footer(){
                         <a target='_blank' href='https://github.com/bonkmaster2010'><img id='git' src={git} alt='GitHub Icon'/></a>
                         <a target='_blank' href='https://x.com/Omar_Devs'><img id='x' src={x} alt='Twitter Icon'/></a>
                         <a target='_blank' href='https://www.reddit.com/user/Fun-Bat8048/ '><img id='reddit' src={red} alt='Reddit Icon'/></a>
-                    </div>
-                    <button id='whats-that' onClick={() => setGub(true)}>?</button>
-                    {gub && (
-                        <div className='overlay'>
-                            <div className='modal'>
-                                Gubby is a cosmic entity who occasionally visits this portfolio. Scientists believe he survives on CSS gradients and bug reports.
-                                konami code is a secret
-                                <button id="gub" onClick={() => setGub(false)}>Ok</button>
-                            </div>
-                        </div>
-                    )}
+                    </div>    
                 </div>
     </>
    )

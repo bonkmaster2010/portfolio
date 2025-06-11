@@ -21,7 +21,7 @@ function AboutMe() {
       <div className='about-me'>
 
         {mj && (
-          <div className='overlay'>
+          <div className='overlay' onClick={() => setMj(false)}>
             <div className='modal'>
               <p>I'm Omar, a self-taught developer from Cairo, Egypt. I started learning web development and since then, I've been building real projects, learning by doing.</p>
               <p>So far, I’ve completed 13 projects — including apps like a calculator, to-do list, blog, dashboard, and even an e-commerce site. Every project pushed me to learn something new and solve real problems.</p>
@@ -59,6 +59,7 @@ function AboutMe() {
         <ul>
           <li>Front-end ✅</li>
           <li>Back-end (currently learning)</li>
+          <li>UI/UX Design</li>
           <li>C</li>
           <li>C++</li>
         </ul>

@@ -40,7 +40,6 @@
   transform: rotate(-1deg);
 }
 
-/* Cartoony Projects Button */
 .other-projects-btn {
   background: var(--neon-red);
   color: white;
@@ -92,7 +91,6 @@
   opacity: 0.3;
 }
 
-/* Bouncy expand animation */
 @keyframes expandLine {
   from { 
     width: 0; 
@@ -106,7 +104,6 @@
   }
 }
 
-/* Projects Container */
 .projects-cont {
   display: flex;
   flex-direction: column;
@@ -115,6 +112,7 @@
   padding: 0 20px 60px;
   max-width: 1200px;
   margin: 0 auto;
+  overflow: visible;
 }
 
 /* ----- Responsive Grid ----- */

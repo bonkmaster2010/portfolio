@@ -13,6 +13,17 @@
 }
 
 /* ----- Base Styles ----- */
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+.a{
+ overflow-y: hidden !important;  
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -22,7 +33,6 @@ body {
   min-height: 100vh;
 }
 
-/* ----- Cartoony Navbar ----- */
 .Layout {
   display: flex;
   gap: 15px;
@@ -33,23 +43,10 @@ body {
   z-index: 100;
   background-color: var(--card-bg);
   box-shadow: 0 5px 0 rgba(0,0,0,0.1);
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-  max-height: 500px; 
   opacity: 1;
   overflow: hidden;
 }
 
-.Layout.slide-out {
-  max-height: 0;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.Layout.slide-in {
-  max-height: 500px;
-  opacity: 1;
-  pointer-events: auto;
-}
 
 .Layout a {
   text-decoration: none;
@@ -71,7 +68,6 @@ body {
   background-color: white;
 }
 
-/* Active link indicator */
 .Layout a::after {
   content: '';
   position: absolute;
@@ -141,20 +137,6 @@ body {
   }
 }
 
-.minimal-mode #tgm {
-  background: var(--soft-pink);
-  box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
-}
-
-.minimal-mode #tgm::before {
-  left: calc(100% - 28px);
-  background: var(--text-primary);
-}
-
-.minimal-mode #tgm::after {
-  content: 'Simple';
-  color: white;
-}
 
 #tgm:hover {
   transform: translateY(-2px);
@@ -167,53 +149,6 @@ body {
 
 #tgm:active::before {
   width: 30px;
-}
-
-.nav-toggle {
-  position: fixed;
-  top: calc(3rem + 42px); 
-  right: 5%;
-  z-index: 100;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 3px solid var(--neon-red);
-  background-color: var(--soft-pink);
-  color: var(--neon-red);
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: 'Comic Sans MS', sans-serif;
-  cursor: pointer;
-  box-shadow: 5px 5px 0 rgba(0,0,0,0.1);
-  transition: all var(--transition-bounce);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0;
-  line-height: 1;
-}
-
-.nav-toggle:hover {
-  transform: translateY(-5px) scale(1.1);
-  background-color: var(--neon-red);
-  color: white;
-  box-shadow: 8px 8px 0 rgba(0,0,0,0.1);
-}
-
-.nav-toggle::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.nav-toggle:hover::after {
-  opacity: 0.4;
 }
 
 /* Minimal Mode Styles */
@@ -240,6 +175,52 @@ body {
   box-shadow: none;
 }
 
+.minimal-mode 
+div,
+.minimal-mode li,
+.minimal-mode h1,
+.minimal-mode h2,
+.minimal-mode h3,
+.minimal-mode h4,
+.minimal-mode a,
+.minimal-mode span,
+.minimal-mode hr,
+.minimal-mode p,
+.minimal-mode img{
+  border-color: black !important; 
+}
+
+.minimal-mode p, .minimal-mode a, .minimal-mode h1, .minimal-mode h2, .minimal-mode h3, .minimal-mode h4, .minimal-mode span{
+  color: black !important;
+}
+
+.minimal-mode span:hover{
+  background-color: #FFF0D4;
+}
+
+.minimal-mode button{
+  background-color: rgb(24, 24, 24) !important;
+}
+
+.minimal-mode button:hover{
+  background-color: black !important;
+}
+
+.minimal-mode #tgm {
+  background: var(--soft-pink) !important;
+  color: white;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+}
+
+.minimal-mode #tgm::before {
+  left: calc(100% - 28px);
+  background: var(--text-primary);
+}
+
+.minimal-mode #tgm::after {
+  content: 'Simple';
+  color: white;
+}
 
 /* Animation keyframes */
 @keyframes bounce {

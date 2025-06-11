@@ -57,7 +57,7 @@ export const projectData: Project[] = [
     isActive: false
   },
   {
-    title: "Megatron (🥀)",
+    title: "Megatron",
     desc: "A basic AI chat app created to test API fetching and CSS skills. Allows real-time chatting with an AI model and helped me practice asynchronous requests and UI updates.",
     tools: "REACT • JS • CSS",
     images: [AC1, AC2],

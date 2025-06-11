@@ -10,7 +10,7 @@ function Contact() {
                     <h1>Services</h1>
                     <div className='services-cards'>
                     
-                        <a target='_blank' href='https://www.coursera.org/articles/web-developer'>
+                        <a target='_blank'>
                         <div className='service-card'>
                             <h2>Web Development</h2>
                             <p>
@@ -21,6 +21,8 @@ function Contact() {
                         </a>
                     
                     </div>
+
+                    
                 </div>
                 <Footer/>
             </div>
