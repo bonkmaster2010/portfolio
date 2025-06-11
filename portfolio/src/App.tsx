@@ -45,11 +45,11 @@ function AboutMe() {
 
         <h2 className='intro-label'>FrontEnd Languages/Frameworks I Have Experience In</h2>
         <div className='my-skills'>
-          <a target='_blank' href='https://react.dev/'><span className='skills-card'>React</span></a>
-          <a target='_blank' href='https://www.w3schools.com/whatis/whatis_js.asp'><span className='skills-card'>JavaScript</span></a>
-          <a target='_blank' href='https://www.typescriptlang.org/'><span className='skills-card'>TypeScript</span></a>
-          <a target='_blank' href='https://www.w3schools.com/whatis/whatis_html.asp'><span className='skills-card'>HTML</span></a>
-          <a target='_blank' href='https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS'><span className='skills-card'>CSS</span></a>
+          <span className='skills-card'>React</span>
+          <span className='skills-card'>JavaScript</span>
+          <span className='skills-card'>TypeScript</span>
+          <span className='skills-card'>HTML</span>
+          <span className='skills-card'>CSS</span>
         </div>
 
         <hr id='intro-hr' />

@@ -154,9 +154,9 @@ html{
   padding: 24px;
   border-radius: 16px;
   border: 4px solid var(--cart-red);
-  max-width: 600px;
+  max-width: 500px;
   width: 90%;
-  height: 350px;
+  height: 650px;
   text-align: center;
   animation: modalIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   overflow: scroll;
@@ -459,4 +459,31 @@ html{
   .modal::-webkit-scrollbar {
     display: none;
   }
+
+  span{
+    box-shadow: none !important;
+  }
+  
+   button:hover,
+   #mj:hover,
+   #mj-check:hover,
+   #img-close:hover,
+   #gub:hover,
+   #rockAndRoll:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    background-color: var(--cart-red); 
+  }
+
+  span:hover{
+    color: black !important;
+    transform: none !important;
+    box-shadow: none !important;
+    background-color: var(--beige-light) !important;
+  }
+  
+  div:hover{
+    transform: none !important;
+  }
+
 }
