@@ -76,7 +76,7 @@ function AboutMe() {
         </ul>
         </div>
         
-        <h2 className='intro-label'>Quotes I Live By</h2>
+        <h2 className='intro-label'>Quotes i like</h2>
        <div className='intersts'> 
          <p id='quote-title'>Here is a random Quote</p>
         <p><b>"{quote}"</b></p>
