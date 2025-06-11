@@ -372,7 +372,13 @@ html {
     margin-bottom: 20px;
   }
 
+  .my-intro h2{
+    text-align: center;
+    width: 90%;
+  }
+   
   .my-intro p {
+    width: 90%;
     font-size: 28px;
     text-align: center;
     margin: 0 0 12px 0;

@@ -213,7 +213,7 @@ div,
 }
 
 .minimal-mode #tgm::before {
-  left: calc(100% - 28px);
+  left: calc(100% - 20px);
   background: var(--text-primary);
 }
 
