@@ -213,13 +213,18 @@ div,
 }
 
 .minimal-mode #tgm::before {
-  left: calc(100% - 20px);
+  left: calc(100% - 27px);
   background: var(--text-primary);
 }
 
 .minimal-mode #tgm::after {
   content: 'Simple';
   color: white;
+}
+
+.minimal-mode #git:hover, .minimal-mode #reddit:hover, .minimal-mode #x:hover, .minimal-mode #link:hover{
+  background: transparent;
+  box-shadow: 0 0 15px black;
 }
 
 /* Animation keyframes */

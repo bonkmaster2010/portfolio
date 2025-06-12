@@ -152,7 +152,7 @@
 
 .socials {
   display: flex;
-  gap: 25px;
+  gap: 15px;
   margin-top: 20px;
   overflow: visible !important;
   overflow-y: hidden;  
@@ -161,12 +161,12 @@
 .socials a{
   padding: 20px;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .socials img {
   width: 50px;
   height: 50px;
-  border: 3px solid var(--cart-red);
   border-radius: 50%;
   padding: 5px;
   background: white;
@@ -175,24 +175,37 @@
 }
 
 .socials img:hover {
-  transform: translateY(-8px) rotate(10deg);
   box-shadow: 8px 8px 0 rgba(0,0,0,0.1);
 }
+
+
+#git{border: 3px solid var(--cart-red);}
+#x{border: 3px solid black}
+#reddit{border: 3px solid #FF5700}
+#link{border: 3px solid var(--accent-blue)}
+
 
 #git:hover {
   background: var(--cart-red);
   box-shadow: 0 0 15px var(--cart-red);
+  border: 3px solid var(--cart-red);
 }
 
 #x:hover {
+  background: black;
+  box-shadow: 0 0 15px black;
+}
+
+#reddit:hover {
+  background: #FF5700;
+  box-shadow: 0 0 15px #FF5700;
+}
+
+#link:hover{
   background: var(--accent-blue);
   box-shadow: 0 0 15px var(--accent-blue);
 }
 
-#reddit:hover {
-  background: var(--accent-yellow);
-  box-shadow: 0 0 15px var(--accent-yellow);
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -282,13 +295,15 @@
 
   #git,
   #x,
-  #reddit{
+  #reddit,
+  #link{
     box-shadow: none;
   }
 
   #git:hover,
   #x:hover,
-  #reddit:hover {
+  #reddit:hover,
+  #link:hover {
     background: white !important;
     box-shadow: 0 0 0 transparent !important;
   }
@@ -299,4 +314,5 @@
     transition: none !important;
   }
 }
+
 

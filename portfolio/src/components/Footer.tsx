@@ -1,6 +1,7 @@
 import git from '../icons/github.png';
 import x from '../icons/X.png';
 import red from '../icons/reddit.png';
+import job from '../icons/j_bs.png';
 
 function Footer(){
    return (
@@ -19,9 +20,10 @@ function Footer(){
                         </a> or at omarstudiesstuff@gmail.com
                     </p>
                     <div className='socials'>
-                        <a target='_blank' href='https://github.com/bonkmaster2010'><img id='git' src={git} alt='GitHub Icon'/></a>
-                        <a target='_blank' href='https://x.com/Omar_Devs'><img id='x' src={x} alt='Twitter Icon'/></a>
+                        <a target='_blank' href='https://github.com/bonkmaster2010'><img id='git'  src={git} alt='GitHub Icon'/></a>
+                        <a target='_blank' href='https://x.com/Omar_Devs'><img id='x'  src={x} alt='Twitter Icon'/></a>
                         <a target='_blank' href='https://www.reddit.com/user/Fun-Bat8048/ '><img id='reddit' src={red} alt='Reddit Icon'/></a>
+                        <a target='_blank' href='https://www.reddit.com/user/Fun-Bat8048/ '><img id='link'  src={job} alt='Linkedin Icon'/></a>
                     </div>    
                 </div>
     </>
