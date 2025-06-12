@@ -56,6 +56,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
   flex-direction: column;
   width: 100%;
   height: 300px;
@@ -189,6 +190,7 @@ html {
 }
 
 #mj, #mj-check, #img-close, #gub {
+  margin: 0px auto;
   padding: 12px 20px;
   border-radius: 12px;
   font-weight: bold;
