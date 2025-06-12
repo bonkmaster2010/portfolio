@@ -23,7 +23,7 @@ function Footer(){
                         <a target='_blank' href='https://github.com/bonkmaster2010'><img id='git'  src={git} alt='GitHub Icon'/></a>
                         <a target='_blank' href='https://x.com/Omar_Devs'><img id='x'  src={x} alt='Twitter Icon'/></a>
                         <a target='_blank' href='https://www.reddit.com/user/Fun-Bat8048/ '><img id='reddit' src={red} alt='Reddit Icon'/></a>
-                        <a target='_blank' href='https://www.reddit.com/user/Fun-Bat8048/ '><img id='link'  src={job} alt='Linkedin Icon'/></a>
+                        <a target='_blank' href='https://www.linkedin.com/in/omar-yasser-9b5377369/'><img id='link'  src={job} alt='Linkedin Icon'/></a>
                     </div>    
                 </div>
     </>
