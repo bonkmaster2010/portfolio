@@ -155,6 +155,7 @@ body {
 .minimal-mode {
   --neon-red: #5C3A2E;
   --text-glow: none;
+  background-color: #E8D0A5;
   font-family: system-ui, sans-serif;
 }
 
