@@ -12,7 +12,7 @@
   margin: 0 auto;
   padding: 15px 30px;
   max-width: 300px;
-  background-color: var(--beige-light);
+  background-color: var(--beige-dark);
   color: var(--text-primary);
   text-align: center;
   border: 3px solid var(--cart-red);
